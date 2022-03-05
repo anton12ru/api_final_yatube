@@ -1,6 +1,6 @@
 ## Описание проекта и его польза:
 
-*Данный проект позволит вам познакомиться с запросами API,
+*Данный проект позволит вам познакомиться с запросами `API`,
 и получения информации в формате* `JSON`.
 
 *При запросе к определнным эндпоинам, вы получите подробную информцию
@@ -76,26 +76,26 @@ GET http://127.0.0.1:8000/api/v1/posts/ -
 получение списка постов
 ```
 [
-  {
-    "id": 0,
-    "author": "string",
-    "text": "string",
-    "pub_date": "2021-10-14T20:41:29.648Z",
-    "image": "string",
-    "group": 0
-  }
+    {
+        "id": 0,
+        "author": "string",
+        "text": "string",
+        "pub_date": "2021-10-14T20:41:29.648Z",
+        "image": "string",
+        "group": 0
+    }
 ]
 ```
 GET http://127.0.0.1:8000/api/v1/posts/{id}/ -
 получение о конкретном посте
 ```
 {
-  "id": 0,
-  "author": "string",
-  "text": "string",
-  "pub_date": "2019-08-24T14:15:22Z",
-  "image": "string",
-  "group": 0
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "pub_date": "2019-08-24T14:15:22Z",
+    "image": "string",
+    "group": 0
 }
 ```
 
@@ -106,18 +106,18 @@ POST http://127.0.0.1:8000/api/v1/posts/ - Создание публикации
 обязательное поле для заполнения
 
 {
-  "text": "string"
+    "text": "string"
 }
 
 Ответ на создание поста:
 
 {
-  "id": 0,
-  "author": "string",
-  "text": "string",
-  "pub_date": "2019-08-24T14:15:22Z",
-  "image": "string",
-  "group": 0
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "pub_date": "2019-08-24T14:15:22Z",
+    "image": "string",
+    "group": 0
 }
 ```
 
@@ -142,13 +142,13 @@ POST http://127.0.0.1:8000/api/v1/posts/ - Создание публикации
 обязательное поле для заполнения:
 
 {
-  "following": "string"
+    "following": "string"
 }
 
 Ответ на подписавшегося автора:
 
 {
-  "user": "string",
-  "following": "string"
+    "user": "string",
+    "following": "string"
 }
 ```
