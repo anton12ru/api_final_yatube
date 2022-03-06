@@ -1,8 +1,9 @@
 from django.core.exceptions import PermissionDenied
 from posts.models import Comment, Group, Post
-from rest_framework import viewsets, permissions, filters, mixins
+from rest_framework import viewsets, permissions, filters
 from rest_framework.pagination import LimitOffsetPagination
 
+from api.mixins import CreateDestroyListViewSet
 from api.permissions import OwnerOrReadOnly
 from api.serializers import (CommentSerializer, FollowSerializer,
                              GroupSerializer, PostSerializer)
@@ -59,16 +60,10 @@ class CommentViewSet(viewsets.ModelViewSet):
         instance.delete()
 
 
-class CreateDestroyListViewSet(mixins.CreateModelMixin, mixins.ListModelMixin,
-                               mixins.DestroyModelMixin,
-                               viewsets.GenericViewSet):
-    pass
-
-
 class FollowViewSet(CreateDestroyListViewSet):
     serializer_class = FollowSerializer
     filter_backends = (filters.SearchFilter,)
-    search_fields = ('following__username',)
+    search_fields = ('=following__username',)
 
     def get_queryset(self):
         return self.request.user.follower
