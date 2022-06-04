@@ -33,23 +33,20 @@ Cоздать и активировать виртуальное окружен�
 python3 -m venv env
 ```
 
-Для Mac OS
+Активация виртуального окружения для Mac OS
 ```
 source env/bin/activate
 ```
 
-Для Windows
+Активация виртуального окружения для Windows
 ```
 source venv/scripts/activate
-```
-
-```
-python3 -m pip install --upgrade pip
 ```
 
 Установить зависимости из файла requirements.txt:
 
 ```
+python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
